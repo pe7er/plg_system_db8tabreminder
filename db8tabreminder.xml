@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="content" method="upgrade">
+	<name>plg_system_db8tabreminder</name>
+	<author>Peter Martin</author>
+    <creationDate>April 2015</creationDate>
+    <copyright>Copyright (C) 2015 by Peter Martin. All rights reserved.</copyright>
+    <license>GNU General Public License version 2</license>
+    <authorEmail>joomla@db8.nl</authorEmail>
+    <authorUrl>www.db8.nl</authorUrl>
+    <version>1.0.0</version>
+    <description>This plugin changes the title in the tab when the visitor focuses on another tab</description>
+	<files>
+		<filename plugin="db8tabreminder">db8tabreminder.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+		</fields>
+	</config>
+</extension>
