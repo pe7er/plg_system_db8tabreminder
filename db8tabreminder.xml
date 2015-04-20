@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.4" type="plugin" group="content" method="upgrade">
-	<name>plg_system_db8tabreminder</name>
+<extension version="3.4" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_DB8TABREMINDER</name>
 	<author>Peter Martin</author>
     <creationDate>April 2015</creationDate>
     <copyright>Copyright (C) 2015 by Peter Martin. All rights reserved.</copyright>
@@ -8,12 +8,44 @@
     <authorEmail>joomla@db8.nl</authorEmail>
     <authorUrl>www.db8.nl</authorUrl>
     <version>1.0.0</version>
-    <description>This plugin changes the title in the tab when the visitor focuses on another tab</description>
+    <description>PLG_SYSTEM_DB8TABREMINDER_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="db8tabreminder">db8tabreminder.php</filename>
+        <filename>db8tabreminder.xml</filename>
+        <folder>assets</folder>
+        <folder>language</folder>
 	</files>
-	<config>
-		<fields name="params">
-		</fields>
+    <config>
+    <fields name="params">
+        <fieldset name="basic">
+            <field
+                    name="pretitle"
+                    type="text"
+                    default="Please come back to "
+                    label="PLG_SYSTEM_DB8TABREMINDER_FIELD_PRETITLE_LABEL"
+                    description="PLG_SYSTEM_DB8TABREMINDER_FIELD_PRETITLE_DESC"/>
+
+            <field name="showtitle"
+                   type="radio"
+                   default="1"
+                   class="btn-group btn-group-yesno"
+                   label="PLG_SYSTEM_DB8TABREMINDER_SHOWTITLE_LABEL"
+                   description="PLG_SYSTEM_DB8TABREMINDER_SHOWTITLE_DESC"
+                   >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field
+                    name="posttitle"
+                    type="text"
+                    default="!"
+                    label="PLG_SYSTEM_DB8TABREMINDER_FIELD_POSTTITLE_LABEL"
+                    description="PLG_SYSTEM_DB8TABREMINDER_FIELD_POSTTITLE_DESC"/>
+        </fieldset>
+    </fields>
 	</config>
+    <updateservers>
+        <server type="extension" priority="1" name="plg_system_db8tabreminder">http://www.db8.nl/updates/plg_system_db8tabreminder.xml</server>
+    </updateservers>
 </extension>
